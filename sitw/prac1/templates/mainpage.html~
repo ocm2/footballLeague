@@ -1,0 +1,16 @@
+<html>
+	<head>
+	<title>{{ titlehead}}</title>
+	</head>
+	<body>
+		<h1>{{ pagetitle }}</h1>
+
+	{% if user.username %}
+	<p>Benvingut {{ user.username }}!
+	</p>
+	{% else %}
+	<p>Benvingut:</p>
+	{% endif %}
+		
+	</body>
+	</html>
