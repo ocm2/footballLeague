@@ -15,7 +15,7 @@ DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.sqlite3',
 'NAME': 'basedades.db',
-'USER': '',
+'USER': 'admin',
 'PASSWORD': '',
 }
 }

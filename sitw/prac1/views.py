@@ -24,7 +24,7 @@ def mainpage(request):
 		'titlehead': 'Football League App',
 		'pagetitle': 'Welcome to the Football League App',
 		'contentbody': 'Managing non legal funding since 2013',
-		'user': request.user
+		'user': request.user,
 		})
 	output = template.render(variables)
 	return HttpResponse(output)

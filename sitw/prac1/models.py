@@ -16,3 +16,11 @@ class Team(models.Model):
 	foundationYear = models.IntegerField()
 	def __unicode__(self):
 		return self.teamName
+
+class Player(models.Model):
+	playerName = models.CharField(max_length=50)
+	bornDate = models.DateField()
+	nacionality = models.CharField(max_length=50)
+	position = models.CharField(max_length=20)
+	def __unicode__(self):
+		return self.playerName+ " - "+self.position
