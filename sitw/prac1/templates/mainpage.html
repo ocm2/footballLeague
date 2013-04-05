@@ -13,13 +13,34 @@
 	</p>
 	{% endif %}
 	
-	<h2>List of Leagues:<h2> 
-	
+	<h2>List of Leagues:<h2>
+	<ol> 	
 	{% for l in leagues %}
 	<li>
-	{{l.name}}
+		{{l.name}}
 	</li>
 	{% endfor %}
+	</ol>
+	<br>
+
+	<h2>List of Teams:<h2>
+	<ol> 
+	{% for t in teams %}
+	<li>
+		{{t.teamName}}
+	</li>
+	{% endfor %}
+	</ol>
+	<br>
+
+	<h2>List of Players:<h2>
+	<ol> 
+	{% for p in players %}
+	<li>
+		{{p.playerName}}
+	</li>
+	{% endfor %}
+	</ol>
 
 	</body>
 	</html>
