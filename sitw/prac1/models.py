@@ -41,6 +41,7 @@ class Team(models.Model):
 	def __unicode__(self):
 		return self.name
 
+
 class League(models.Model):
 	name = models.CharField(max_length=50)
 	teams = models.ManyToManyField(Team)

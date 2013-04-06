@@ -84,6 +84,16 @@ def refereeslist(request):
 		'items': referees,
 	})
 	output = template.render(variables)
+	return HttpResponse(output)
+
+def matcheslist(request):
+	matches = Match.objects.all()
+	template = get_template('listPages/matcheslist.html')
+	variables = Context({
+		'title': 'List of Matches',
+		'items': matches,
+	})
+	output = template.render(variables)
 	return HttpResponse(output)	
 
 	

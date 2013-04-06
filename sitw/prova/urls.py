@@ -15,7 +15,7 @@ urlpatterns = patterns('',
 	url(r'^teamslist/$', teamslist, name='List of Teams'),
 	url(r'^leagueslist/$', leagueslist, name='List of Leagues'),
 	url(r'^refereeslist/$', refereeslist, name='List of Referees'),
-
+	url(r'^matcheslist/$', matcheslist, name='List of Matches'),
 
 	#url(r'^user/(\w+)/$', userpage),
 	#url(r'^login/$', 'django.contrib.auth.views.login'),
