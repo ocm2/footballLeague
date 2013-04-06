@@ -50,6 +50,7 @@ class Match(models.Model):
 	matchId = models.IntegerField() 
 	teams = models.ManyToManyField(Team)
 	result = models.CharField(max_length=5)
+	stadium = models.ForeignKey(Stadium)
 	referee = models.ForeignKey(Referee)
 	def __unicode__(self):
 		return self.matchId
