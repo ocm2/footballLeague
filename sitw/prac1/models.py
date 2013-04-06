@@ -30,6 +30,7 @@ class Team(models.Model):
 	name = models.CharField(max_length=50)
 	foundationYear = models.IntegerField()
 	players = models.ManyToManyField(Player)
+	stadium = models.ForeignKey(Stadium)
 	def __unicode__(self):
 		return self.name
 
@@ -49,5 +50,6 @@ class Match(models.Model):
 	matchId = models.IntegerField() 
 	teams = models.ManyToManyField(Team)
 	result = models.CharField(max_length=5)
+	referee = models.ForeignKey(Referee)
 	def __unicode__(self):
 		return self.matchId
