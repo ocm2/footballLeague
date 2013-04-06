@@ -1,10 +1,5 @@
 <html>
 	<head>
-		<script>
-		function direccion(){
-		location.href='listPages/list.html';
-		}
-		</script>
 
 	<title>{{ titlehead}}</title>
 	</head>
@@ -12,24 +7,25 @@
 		<h1>{{ pagetitle }}</h1>
 
 		<p>List of Leagues:
-			<a href="/leagueslist/">Leagues List</a>
+			<input type="button" value="Leagues List" onClick= location.href="/leagueslist/" />
 		</p>
 
 
 		<p>List of Teams:
-			<a href="/teamslist/">Teams List</a>
+			<input type="button" value="Teams List" onClick= location.href="/teamslist/" />
 		</p>
 
 		<p>List of Players:
+			<input type="button" value="Players List" onClick= location.href="/playerslist/" />
+		</p>
 
+		<p>List of Representatives:
+			<input type="button" value="Representatives List" onClick= location.href="/representativeslist/" />
+		</p>
 
-
-<input type="button" value="Players List" onClick="direccion()" />
-
-<!--			<a href="/playerslist/">Players List</a>
--->		</p>
-
-
+		<p>List of Representatives:
+			<input type="button" value="Stadiums List" onClick= location.href="/stadiumslist/" />
+		</p>
 
 
 	</body>
