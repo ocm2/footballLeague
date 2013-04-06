@@ -5,42 +5,18 @@
 	<body>
 		<h1>{{ pagetitle }}</h1>
 
-	{% if user.username %}
-	<p>Benvingut {{ user.username }}!
-	</p>
-	{% else %}
-	<p>Benvingut anonim!!
-	</p>
-	{% endif %}
-	
-	<h2>List of Leagues:<h2>
-	<ol> 	
-	{% for l in leagues %}
-	<li>
-		{{l.name}}
-	</li>
-	{% endfor %}
-	</ol>
-	<br>
+		<p>List of Leagues:
+			<a href="/leagueslist/">Leagues List</a>
+		</p>
 
-	<h2>List of Teams:<h2>
-	<ol> 
-	{% for t in teams %}
-	<li>
-		{{t.teamName}}
-	</li>
-	{% endfor %}
-	</ol>
-	<br>
 
-	<h2>List of Players:<h2>
-	<ol> 
-	{% for p in players %}
-	<li>
-		{{p.playerName}}
-	</li>
-	{% endfor %}
-	</ol>
+		<p>List of Teams:
+			<a href="/teamslist/">Teams List</a>
+		</p>
+
+		<p>List of Players:
+			<a href="/playerslist/">Players List</a>
+		</p>
 
 	</body>
 	</html>
