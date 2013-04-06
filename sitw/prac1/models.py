@@ -25,12 +25,19 @@ class Stadium(models.Model):
 	capacity = models.IntegerField()
 	def __unicode__(self):
 		return self.name
+class Coach(models.Model):
+	name = models.CharField(max_length=50)	
+        nacionality = models.CharField(max_length=50)
+	age = models.IntegerField()
+	def __unicode__(self):
+		return self.name
 
 class Team(models.Model):
 	name = models.CharField(max_length=50)
 	foundationYear = models.IntegerField()
 	players = models.ManyToManyField(Player)
 	stadium = models.ForeignKey(Stadium)
+	coach = models.ForeignKey(Coach)
 	def __unicode__(self):
 		return self.name
 

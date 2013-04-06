@@ -45,6 +45,17 @@ def stadiumslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
+def coachslist(request):
+	coachs = Coach.objects.all()
+	template = get_template('listPages/list.html')
+	variables = Context({
+		'title': 'List of Coachs',
+		'items': coachs,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)
+
+
 def teamslist(request):
 	teams = Team.objects.all()
 	template = get_template('listPages/list.html')
