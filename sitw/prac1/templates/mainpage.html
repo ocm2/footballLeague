@@ -1,5 +1,11 @@
 <html>
 	<head>
+		<script>
+		function direccion(){
+		location.href='listPages/list.html';
+		}
+		</script>
+
 	<title>{{ titlehead}}</title>
 	</head>
 	<body>
@@ -15,8 +21,16 @@
 		</p>
 
 		<p>List of Players:
-			<a href="/playerslist/">Players List</a>
-		</p>
+
+
+
+<input type="button" value="Players List" onClick="direccion()" />
+
+<!--			<a href="/playerslist/">Players List</a>
+-->		</p>
+
+
+
 
 	</body>
 	</html>
