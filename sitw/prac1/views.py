@@ -97,11 +97,22 @@ def matchesList(request):
 	return HttpResponse(output)	
 
 def teamModel(request):
-	team = 
+#	team = 
 	template = get_template('modelPages/team.html')
 	variables = Context({
-		'title': 'Team',
-		'team' = team,
+		'title': 'Information of Team',
+#		'team' = team,
 	})
 	output = template.render(variables)
-	return HttpResponse(output)			
+	return HttpResponse(output)
+
+def stadiumModel(request):
+	#stadium = Stadium.objects.all()
+	template = get_template('modelsPages/stadium.html')
+	variables = Context({
+		'title': 'Information of Stadium',
+#		'stadium': stadium,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
+			

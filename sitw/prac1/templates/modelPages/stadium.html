@@ -3,27 +3,11 @@
 	<title>{{ title }}</title>
 	</head>
 	<body>
-		<h1>{{ title }}</h1>
+		<h1>{{ title }}: stadium.name</h1>
 
-
-	<table border=1>
-		<tr>
-			<td>Name</td>
-			<td>ConstructionDate</td>
-			<td>capacity</td>
-
-		</tr>	
-	</table>
-
-		<ol> 
-		{% for stadium in items %}
-		<li>
-			{{stadium.name}}
-		</li>
-		{% endfor %}
-		</ol>
-
-
+		<li>Name: {{stadium.name}}</li>
+		<li>ConstructionDate: {{stadium.constructionYear}}</li>
+		<li>Capacity: {{stadium.capacity}}</li>
 	</body>
 <html>
 
