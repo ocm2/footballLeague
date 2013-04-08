@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}</h1>
+
+
+	<table border=1>
+		<tr>
+			<td>Name</td>
+			<td>ConstructionDate</td>
+			<td>capacity</td>
+
+		</tr>	
+	</table>
+
+		<ol> 
+		{% for stadium in items %}
+		<li>
+			{{stadium.name}}
+		</li>
+		{% endfor %}
+		</ol>
+
+
+	</body>
+<html>
+
+
