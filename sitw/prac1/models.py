@@ -21,10 +21,11 @@ class Player(models.Model):
 
 class Stadium(models.Model):
 	name = models.CharField(max_length=50)
-	constructionDate = models.DateField()
+	constructionYear = models.IntegerField()
 	capacity = models.IntegerField()
 	def __unicode__(self):
 		return self.name
+
 class Coach(models.Model):
 	name = models.CharField(max_length=50)	
         nacionality = models.CharField(max_length=50)
@@ -55,10 +56,11 @@ class Referee(models.Model):
 		return self.name
 
 class Match(models.Model):
-	matchId = models.IntegerField() 
+	day = models.CharField(max_length=10) #Jornada
+	numOfMatch = models.CharField(max_length=10) #numero de partit dins la jornada 
 	teams = models.ManyToManyField(Team)
 	result = models.CharField(max_length=5)
 	stadium = models.ForeignKey(Stadium)
 	referee = models.ForeignKey(Referee)
 	def __unicode__(self):
-		return self.matchId
+		return self.day+" - "+ self.numOfMatch
