@@ -15,7 +15,7 @@ def mainpage(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def representativeslist(request):
+def representativesList(request):
 	representatives = Representative.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -25,7 +25,7 @@ def representativeslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def playerslist(request):
+def playersList(request):
 	players = Player.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -35,7 +35,7 @@ def playerslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def stadiumslist(request):
+def stadiumsList(request):
 	stadiums = Stadium.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -45,7 +45,7 @@ def stadiumslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def coachslist(request):
+def coachsList(request):
 	coachs = Coach.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -56,7 +56,7 @@ def coachslist(request):
 	return HttpResponse(output)
 
 
-def teamslist(request):
+def teamsList(request):
 	teams = Team.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -66,7 +66,7 @@ def teamslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)	
 
-def leagueslist(request):
+def leaguesList(request):
 	leagues = League.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -76,7 +76,7 @@ def leagueslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)	
 
-def refereeslist(request):
+def refereesList(request):
 	referees = Referee.objects.all()
 	template = get_template('listPages/list.html')
 	variables = Context({
@@ -86,7 +86,7 @@ def refereeslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def matcheslist(request):
+def matchesList(request):
 	matches = Match.objects.all()
 	template = get_template('listPages/matcheslist.html')
 	variables = Context({
@@ -96,4 +96,12 @@ def matcheslist(request):
 	output = template.render(variables)
 	return HttpResponse(output)	
 
-	
+def teamModel(request):
+	team = 
+	template = get_template('modelPages/team.html')
+	variables = Context({
+		'title': 'Team',
+		'team' = team,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)			

@@ -1,0 +1,18 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}</h1>
+		<ol> 
+		<li> Name: {{team.name}}</li>
+		<li> Foundation Year: {{team.foundationYear}}</li>
+		<li> Players <li>
+		{% for p in team.players.all %}
+			<li>{{p.name}}</li>
+		{% endfor %} 
+		<li> Stadium: {{team.stadium.name}}</li>
+		<li> Coach: {{team.coach.name}}</li>
+		</ol>
+	</body>
+<html>
