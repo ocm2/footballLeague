@@ -20,8 +20,8 @@ urlpatterns = patterns('',
 	url(r'^teamModel/$', teamModel, name='Data of Team'),
 
 	url(r'^stadiumsList/(?P<idaux>\d+)/$', stadiumModel, name='Data of Stadium'),
-
-
+	url(r'^matchesList/(?P<idaux>\d+)/$', matchModel, name='Data of Match'),
+	url(r'^refereesList/(?P<idaux>\d+)/$', refereeModel, name='Data of Referee'),
 
 	#url(r'^user/(\w+)/$', userpage),
 	#url(r'^login/$', 'django.contrib.auth.views.login'),

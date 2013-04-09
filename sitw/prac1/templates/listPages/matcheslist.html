@@ -7,7 +7,8 @@
 		<ol> 
 		{% for i in items %}
 		<li>
-			{{i.team1.name}}
+			{{i.day}} {{i.numOfMatch}}
+			<input type="button" value="Data" onClick= location.href="/matchesList/{{i.id}}/" />
 		</li>
 		{% endfor %}
 		</ol>

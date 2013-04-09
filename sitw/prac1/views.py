@@ -115,4 +115,24 @@ def stadiumModel(request, idaux):
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
+
+def matchModel(request, idaux):
+	match = Match.objects.get(id = idaux)
+	template = get_template('modelPages/match.html')
+	variables = Context({
+		'title': 'Information of Match: ',
+		'match': match,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
+
+def refereeModel(request, idaux):
+	referee = Referee.objects.get(id = idaux)
+	template = get_template('modelPages/referee.html')
+	variables = Context({
+		'title': 'Information of Referee',
+		'ref': referee,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
 			

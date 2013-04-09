@@ -4,14 +4,17 @@
 	</head>
 	<body>
 		<h1>{{ title }}: {{match.day}} - {{match.numOfMatch}}</h1>
-		<ol> 
-			<li> Teams: <li>
+		 
+			<li> Teams:
 			{% for t in match.teams.all %}
-				<li>{{t.name}}</li>
+				{{t.name}} <input type="button" value="+Details" onClick= location.href="/refreeList/{{match.stadium.id}}/" />
 			{% endfor %} 
+ 			</li>
 			<li> Result: {{match.result}}</li>
-			<li> Stadium: {{match.stadium.name}}</li>
-			<li> Referee: {{match.referee.name}}</li>
-		</ol>
+			<li> Stadium: {{match.stadium.name}}			
+			     <input type="button" value="+Details" onClick= location.href="/stadiumsList/{{match.stadium.id}}/" /> </li>
+			<li> Referee: {{match.referee.name}}
+			     <input type="button" value="+Details" onClick= location.href="/refereesList/{{match.referee.id}}/" /> </li>		
+
 	</body>
 <html>
