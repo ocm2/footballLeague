@@ -47,7 +47,7 @@ class League(models.Model):
 	name = models.CharField(max_length=50)
 	teams = models.ManyToManyField(Team)
 	def __unicode__(self):
-		return self.name+" - "+self.description
+		return self.name
 
 class Referee(models.Model):
 	name = models.CharField(max_length=50)

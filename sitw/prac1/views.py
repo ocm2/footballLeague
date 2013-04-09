@@ -21,9 +21,20 @@ def representativesList(request):
 	variables = Context({
 		'title': 'List of Representatives',
 		'items': representatives,
+		'route': 'representativeList',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
+
+def representativeModel(request, idaux):
+	representative = Representative.objects.get(id = idaux)
+	template = get_template('modelPages/representative.html')
+	variables = Context({
+		'title': 'Information of Representative',
+		'rep': representative,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
 
 def playersList(request):
 	players = Player.objects.all()
@@ -35,12 +46,32 @@ def playersList(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
+def playerModel(request, idaux):
+	player = Player.objects.get(id = idaux)
+	template = get_template('modelPages/player.html')
+	variables = Context({
+		'title': 'Information of Player',
+		'player': player,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
+
 def stadiumsList(request):
 	stadiums = Stadium.objects.all()
 	template = get_template('listPages/stadiumlist.html')
 	variables = Context({
 		'title': 'List of Stadiums',
 		'items': stadiums,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)
+
+def stadiumModel(request, idaux):
+	stadium = Stadium.objects.get(id = idaux)
+	template = get_template('modelPages/stadium.html')
+	variables = Context({
+		'title': 'Information of Stadium',
+		'stadium': stadium,
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
@@ -55,6 +86,15 @@ def coachsList(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
+def coachModel(request, idaux):
+	coach = Coach.objects.get(id = idaux)
+	template = get_template('modelPages/coach.html')
+	variables = Context({
+		'title': 'Information of Coach',
+		'coach': coach,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)
 
 def teamsList(request):
 	teams = Team.objects.all()
@@ -66,6 +106,16 @@ def teamsList(request):
 	output = template.render(variables)
 	return HttpResponse(output)	
 
+def teamModel(request, idaux):
+	team = Team.objects.get(id = idaux)
+	template = get_template('modelPages/team.html')
+	variables = Context({
+		'title': 'Information of Team',
+		'team': team,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)
+
 def leaguesList(request):
 	leagues = League.objects.all()
 	template = get_template('listPages/list.html')
@@ -75,6 +125,16 @@ def leaguesList(request):
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
+
+def leagueModel(request, idaux):
+	league = League.objects.get(id = idaux)
+	template = get_template('modelPages/league.html')
+	variables = Context({
+		'title': 'Information of League',
+		'league': league,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)
 
 def refereesList(request):
 	referees = Referee.objects.all()
@@ -86,32 +146,22 @@ def refereesList(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
+def refereeModel(request, idaux):
+	referee = Referee.objects.get(id = idaux)
+	template = get_template('modelPages/referee.html')
+	variables = Context({
+		'title': 'Information of Referee',
+		'ref': referee,
+	})
+	output = template.render(variables)
+	return HttpResponse(output)	
+
 def matchesList(request):
 	matches = Match.objects.all()
 	template = get_template('listPages/matcheslist.html')
 	variables = Context({
 		'title': 'List of Matches',
 		'items': matches,
-	})
-	output = template.render(variables)
-	return HttpResponse(output)	
-
-def teamModel(request):
-#	team = 
-	template = get_template('modelPages/team.html')
-	variables = Context({
-		'title': 'Information of Team',
-#		'team' = team,
-	})
-	output = template.render(variables)
-	return HttpResponse(output)
-
-def stadiumModel(request, idaux):
-	stadium = Stadium.objects.get(id = idaux)
-	template = get_template('modelPages/stadium.html')
-	variables = Context({
-		'title': 'Information of Stadium',
-		'stadium': stadium,
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
@@ -125,14 +175,5 @@ def matchModel(request, idaux):
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
-
-def refereeModel(request, idaux):
-	referee = Referee.objects.get(id = idaux)
-	template = get_template('modelPages/referee.html')
-	variables = Context({
-		'title': 'Information of Referee',
-		'ref': referee,
-	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+	
 			

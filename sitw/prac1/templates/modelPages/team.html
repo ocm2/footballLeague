@@ -4,15 +4,16 @@
 	</head>
 	<body>
 		<h1>{{ title }}: {{team.name}}</h1>
-		<ol> 
+		 
 			<li> Name: {{team.name}}</li>
 			<li> Foundation Year: {{team.foundationYear}}</li>
-			<li> Players: <li>
-			{% for p in team.players.all %}
-				<li>{{p.name}}</li>
-			{% endfor %} 
-			<li> Stadium: {{team.stadium.name}}</li>
-			<li> Coach: {{team.coach.name}}</li>
-		</ol>
+			<li> Stadium: {{team.stadium.name}}<input type="button" value="+Details" onClick= location.href="/stadiumsList/{{team.stadium.id}}/" /> </li>
+			<li> Coach: {{team.coach.name}}<input type="button" value="+Details" onClick= location.href="/coachsList/{{team.coach.id}}/" /> </li>
+			<li> Players: </li>		
+			<ul>{% for p in team.players.all %}
+					<li>{{p.name}}<input type="button" value="+Details" onClick= location.href="/playersList/{{p.id}}/" /> </li>
+				{% endfor %} 
+			</ul>
+
 	</body>
 <html>

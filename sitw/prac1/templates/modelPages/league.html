@@ -4,12 +4,14 @@
 	</head>
 	<body>
 		<h1>{{ title }}: {{league.name}}</h1>
-		<ol> 
+
 			<li> Name: {{league.name}}</li>
-			<li> Teams: <li>
-			{% for t in league.teams.all %}
-				<li>{{t.name}}</li>
-			{% endfor %} 
-		</ol>
+			<li> Teams: </li>
+			<ul>
+				{% for t in league.teams.all %}
+				<li>{{t.name}}<input type="button" value="+Details" onClick= location.href="/teamList/{{t.id}}/" /></li>
+				{% endfor %} 
+			</ul>
+
 	</body>
 <html>

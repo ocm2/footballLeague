@@ -7,7 +7,7 @@
 		 
 			<li> Teams:
 			{% for t in match.teams.all %}
-				{{t.name}} <input type="button" value="+Details" onClick= location.href="/refreeList/{{match.stadium.id}}/" />
+				{{t.name}} <input type="button" value="+Details" onClick= location.href="/teamList/{{t.id}}/" />
 			{% endfor %} 
  			</li>
 			<li> Result: {{match.result}}</li>

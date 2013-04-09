@@ -7,7 +7,8 @@
 		<ol> 
 		{% for i in items %}
 		<li>
-			{{i.name}}
+			{{i.name}}	
+			<input type="button" value="+Details" onClick= location.href="/{{route}}" />
 		</li>
 		{% endfor %}
 		</ol>
