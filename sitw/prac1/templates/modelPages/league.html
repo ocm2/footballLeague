@@ -1,0 +1,15 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}: {{league.name}}</h1>
+		<ol> 
+			<li> Name: {{league.name}}</li>
+			<li> Teams: <li>
+			{% for t in league.teams.all %}
+				<li>{{t.name}}</li>
+			{% endfor %} 
+		</ol>
+	</body>
+<html>

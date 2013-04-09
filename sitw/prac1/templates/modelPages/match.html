@@ -1,0 +1,17 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}: {{match.day}} - {{match.numOfMatch}}</h1>
+		<ol> 
+			<li> Teams: <li>
+			{% for t in match.teams.all %}
+				<li>{{t.name}}</li>
+			{% endfor %} 
+			<li> Result: {{match.result}}</li>
+			<li> Stadium: {{match.stadium.name}}</li>
+			<li> Referee: {{match.referee.name}}</li>
+		</ol>
+	</body>
+<html>
