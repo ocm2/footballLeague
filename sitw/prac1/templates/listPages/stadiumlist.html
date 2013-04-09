@@ -1,0 +1,16 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}</h1>
+		<ol> 
+		{% for i in items %}
+		<li>
+			{{i.name}}
+			<input type="button" value="Data" onClick= location.href="/stadiumsList/{{i.id}}/" />
+		</li>
+		{% endfor %}
+		</ol>
+	</body>
+<html>

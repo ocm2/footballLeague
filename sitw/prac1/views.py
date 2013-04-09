@@ -37,7 +37,7 @@ def playersList(request):
 
 def stadiumsList(request):
 	stadiums = Stadium.objects.all()
-	template = get_template('listPages/list.html')
+	template = get_template('listPages/stadiumlist.html')
 	variables = Context({
 		'title': 'List of Stadiums',
 		'items': stadiums,
@@ -106,12 +106,12 @@ def teamModel(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
-def stadiumModel(request):
-	#stadium = Stadium.objects.all()
-	template = get_template('modelsPages/stadium.html')
+def stadiumModel(request, idaux):
+	stadium = Stadium.objects.get(id = idaux)
+	template = get_template('modelPages/stadium.html')
 	variables = Context({
 		'title': 'Information of Stadium',
-#		'stadium': stadium,
+		'stadium': stadium,
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
