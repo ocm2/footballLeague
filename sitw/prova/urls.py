@@ -17,7 +17,6 @@ urlpatterns = patterns('',
 	url(r'^refereesList/$', refereesList, name='List of Referees'),
 	url(r'^matchesList/$', matchesList, name='List of Matches'),
 
-
 	url(r'^stadiumsList/(?P<idaux>\d+)/$', stadiumModel),
 	url(r'^matchesList/(?P<idaux>\d+)/$', matchModel),
 	url(r'^refereesList/(?P<idaux>\d+)/$', refereeModel),

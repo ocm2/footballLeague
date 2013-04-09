@@ -21,7 +21,7 @@ def representativesList(request):
 	variables = Context({
 		'title': 'List of Representatives',
 		'items': representatives,
-		'route': 'representativeList',
+		'route': '/representativeList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
@@ -41,7 +41,8 @@ def playersList(request):
 	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Players',
-		'items': players,
+		'items': players,	
+		'route': '/playersList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
@@ -61,7 +62,8 @@ def stadiumsList(request):
 	template = get_template('listPages/stadiumlist.html')
 	variables = Context({
 		'title': 'List of Stadiums',
-		'items': stadiums,
+		'items': stadiums,	
+		'route': '/stadiumsList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
@@ -81,7 +83,8 @@ def coachsList(request):
 	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Coachs',
-		'items': coachs,
+		'items': coachs,	
+		'route': '/coachsList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)
@@ -101,7 +104,8 @@ def teamsList(request):
 	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Teams',
-		'items': teams,
+		'items': teams,	
+		'route': '/teamList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
@@ -121,7 +125,8 @@ def leaguesList(request):
 	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Leagues',
-		'items': leagues,
+		'items': leagues,	
+		'route': '/leaguesList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)	
@@ -141,7 +146,8 @@ def refereesList(request):
 	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Referees',
-		'items': referees,
+		'items': referees,	
+		'route': '/refereesList/',
 	})
 	output = template.render(variables)
 	return HttpResponse(output)

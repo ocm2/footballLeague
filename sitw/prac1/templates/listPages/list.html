@@ -8,7 +8,7 @@
 		{% for i in items %}
 		<li>
 			{{i.name}}	
-			<input type="button" value="+Details" onClick= location.href="/{{route}}" />
+			<input type="button" value="+Details" onClick= location.href="{{route}}{{i.id}}" />
 		</li>
 		{% endfor %}
 		</ol>
