@@ -15,16 +15,22 @@ def mainpage(request):
 	output = template.render(variables)
 	return HttpResponse(output)
 
+def general(request, template, variables):
+	if template == 'list':
+		template = get_template('listPages/list.html')
+	output = template.render(variables)
+	return HttpResponse(output)
+
+
 def representativesList(request):
 	representatives = Representative.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Representatives',
 		'items': representatives,
 		'route': '/representativeList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def representativeModel(request, idaux):
 	representative = Representative.objects.get(id = idaux)
@@ -33,19 +39,18 @@ def representativeModel(request, idaux):
 		'title': 'Information of Representative',
 		'rep': representative,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, template, variables)
 
 def playersList(request):
 	players = Player.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Players',
 		'items': players,	
 		'route': '/playersList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def playerModel(request, idaux):
 	player = Player.objects.get(id = idaux)
@@ -54,19 +59,18 @@ def playerModel(request, idaux):
 		'title': 'Information of Player',
 		'player': player,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, template, variables)	
 
 def stadiumsList(request):
 	stadiums = Stadium.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Stadiums',
 		'items': stadiums,	
 		'route': '/stadiumsList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def stadiumModel(request, idaux):
 	stadium = Stadium.objects.get(id = idaux)
@@ -75,19 +79,18 @@ def stadiumModel(request, idaux):
 		'title': 'Information of Stadium',
 		'stadium': stadium,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, template, variables)
 
 def coachsList(request):
 	coachs = Coach.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Coachs',
 		'items': coachs,	
 		'route': '/coachsList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def coachModel(request, idaux):
 	coach = Coach.objects.get(id = idaux)
@@ -96,40 +99,37 @@ def coachModel(request, idaux):
 		'title': 'Information of Coach',
 		'coach': coach,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, template, variables)
 
 def teamsList(request):
 	teams = Team.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Teams',
 		'items': teams,	
 		'route': '/teamList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, 'list', variables)	
 
 def teamModel(request, idaux):
 	team = Team.objects.get(id = idaux)
-	template = get_template('modelPages/team.html')
 	variables = Context({
 		'title': 'Information of Team',
 		'team': team,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def leaguesList(request):
 	leagues = League.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Leagues',
 		'items': leagues,	
 		'route': '/leaguesList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, 'list', variables)	
 
 def leagueModel(request, idaux):
 	league = League.objects.get(id = idaux)
@@ -138,19 +138,17 @@ def leagueModel(request, idaux):
 		'title': 'Information of League',
 		'league': league,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+	return general(request, template, variables)
 
 def refereesList(request):
 	referees = Referee.objects.all()
-	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Referees',
 		'items': referees,	
 		'route': '/refereesList/',
 	})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, 'list', variables)
 
 def refereeModel(request, idaux):
 	referee = Referee.objects.get(id = idaux)
@@ -159,8 +157,8 @@ def refereeModel(request, idaux):
 		'title': 'Information of Referee',
 		'ref': referee,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, template, variables)	
 
 def matchesList(request):
 	matches = Match.objects.all()
@@ -169,8 +167,8 @@ def matchesList(request):
 		'title': 'List of Matches',
 		'items': matches,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, template, variables)	
 
 def matchModel(request, idaux):
 	match = Match.objects.get(id = idaux)
@@ -179,7 +177,7 @@ def matchModel(request, idaux):
 		'title': 'Information of Match: ',
 		'match': match,
 	})
-	output = template.render(variables)
-	return HttpResponse(output)	
+
+	return general(request, template, variables)	
 	
 			
