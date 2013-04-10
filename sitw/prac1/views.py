@@ -59,7 +59,7 @@ def playerModel(request, idaux):
 
 def stadiumsList(request):
 	stadiums = Stadium.objects.all()
-	template = get_template('listPages/stadiumlist.html')
+	template = get_template('listPages/list.html')
 	variables = Context({
 		'title': 'List of Stadiums',
 		'items': stadiums,	
