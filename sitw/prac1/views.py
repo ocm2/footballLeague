@@ -114,12 +114,13 @@ def teamsList(request):
 
 def teamModel(request, idaux):
 	team = Team.objects.get(id = idaux)
+	template = get_template('modelPages/team.html')
 	variables = Context({
 		'title': 'Information of Team',
 		'team': team,
 	})
 
-	return general(request, 'list', variables)
+	return general(request, template, variables)
 
 def leaguesList(request):
 	leagues = League.objects.all()
