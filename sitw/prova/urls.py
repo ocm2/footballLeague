@@ -27,7 +27,7 @@ urlpatterns = patterns('',
         url(r'^coachsList/(?P<idaux>\d+)/$', coachModel),
 
 	#url(r'^user/(\w+)/$', userpage),
-	#url(r'^login/$', 'django.contrib.auth.views.login'),
+	url(r'^login/$', 'django.contrib.auth.views.login'),
     # url(r'^$', 'prova.views.home', name='home'),
     # url(r'^prova/', include('prova.foo.urls')),
 
