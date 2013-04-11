@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>{{ titlehead}}</title>
+	</head>
+
+	<body>
+		<h1>{{ pagetitle }}</h1>
+
+{% if user.username %}
+<p>Actual user: {{ user.username }}</p>
+
+
+
+		<p>List of Leagues:
+			<input type="button" value="Leagues List" onClick= location.href="/leaguesList/" />
+		</p>
+
+		<p>List of Teams:
+			<input type="button" value="Teams List" onClick= location.href="/teamsList/" />
+		</p>
+
+		<p>List of Coachs:
+			<input type="button" value="Coachs List" onClick= location.href="/coachsList/" />
+		</p>
+
+		<p>List of Players:
+			<input type="button" value="Players List" onClick= location.href="/playersList/" />
+		</p>
+
+		<p>List of Representatives:
+			<input type="button" value="Representatives List" onClick= location.href="/representativesList/" />
+		</p>
+
+		<p>List of Stadiums:
+			<input type="button" value="Stadiums List" onClick= location.href="/stadiumsList/" />
+		</p>
+
+		<p>List of Referees:
+			<input type="button" value="Referees List" onClick= location.href="/refereesList/" />
+		</p>
+
+		<p>List of Matches:
+			<input type="button" value="Matches List" onClick= location.href="/matchesList/" />
+		</p>
+{% else %}
+
+<p>Welcome:
+Enter with your acount please: <a href="/login/">sign in</a></p>
+{% endif %}
+
+
+	</body>
+	</html>
+
+
+
+
