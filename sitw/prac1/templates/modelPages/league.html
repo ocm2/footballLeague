@@ -9,7 +9,7 @@
 			<li> Teams: </li>
 			<ul>
 				{% for t in league.teams.all %}
-				<li>{{t.name}}<input type="button" value="+Details" onClick= location.href="/teamList/{{t.id}}/" /></li>
+				<li>{{t.name}}<input type="button" value="+Details" onClick= location.href="/team/{{t.id}}/" /></li>
 				{% endfor %} 
 			</ul>
 

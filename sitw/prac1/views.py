@@ -28,7 +28,7 @@ def representativesList(request):
 		'title': 'List of Representatives',
 		'titlehead': 'List of Representatives',
 		'items': representatives,
-		'route': '/representativeList/',
+		'route': '/representative/',
 	})
 
 	return general(request, 'list', variables)
@@ -50,7 +50,7 @@ def playersList(request):
 		'title': 'List of Players',
 		'titlehead': 'List of Players',
 		'items': players,	
-		'route': '/playersList/',
+		'route': '/player/',
 	})
 
 	return general(request, 'list', variables)
@@ -72,7 +72,7 @@ def stadiumsList(request):
 		'title': 'List of Stadiums',
 		'titlehead': 'List of Stadiums',
 		'items': stadiums,	
-		'route': '/stadiumsList/',
+		'route': '/stadium/',
 	})
 
 	return general(request, 'list', variables)
@@ -94,7 +94,7 @@ def coachsList(request):
 		'title': 'List of Coachs',
 		'titlehead': 'List of Coachs',
 		'items': coachs,	
-		'route': '/coachsList/',
+		'route': '/coach/',
 	})
 
 	return general(request, 'list', variables)
@@ -116,7 +116,7 @@ def teamsList(request):
 		'title': 'List of Teams',
 		'titlehead': 'List of Teams',
 		'items': teams,	
-		'route': '/teamList/',
+		'route': '/team/',
 	})
 
 	return general(request, 'list', variables)	
@@ -138,7 +138,7 @@ def leaguesList(request):
 		'title': 'List of Leagues',
 		'titlehead': 'List of Leagues',
 		'items': leagues,	
-		'route': '/leaguesList/',
+		'route': '/league/',
 	})
 
 	return general(request, 'list', variables)	
@@ -159,7 +159,7 @@ def refereesList(request):
 		'title': 'List of Referees',
 		'titlehead': 'List of Referees',
 		'items': referees,	
-		'route': '/refereesList/',
+		'route': '/referee/',
 	})
 
 	return general(request, 'list', variables)
