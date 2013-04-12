@@ -1,8 +1,6 @@
 {% extends "mainpage.html"  %}
-{% block content %}<html>
-	<head>
-	<title>{{ title }}</title>
-	</head>
+{% block content %}
+<html>
 	<body>
 		<p><input type="button" value="<-- Return Previous List" onClick= location.href="/representativesList" /></p>
 		<h1>{{ title }}: {{rep.name}}</h1>

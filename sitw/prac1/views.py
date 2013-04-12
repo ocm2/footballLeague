@@ -25,6 +25,7 @@ def general(request, template, variables):
 def representativesList(request):
 	representatives = Representative.objects.all()
 	variables = Context({
+		'title': 'List of Representatives',
 		'titlehead': 'List of Representatives',
 		'items': representatives,
 		'route': '/representativeList/',
@@ -36,6 +37,7 @@ def representativeModel(request, idaux):
 	representative = Representative.objects.get(id = idaux)
 	template = get_template('modelPages/representative.html')
 	variables = Context({
+		'title': 'Information of Representative',
 		'titlehead': 'Information of Representative',
 		'rep': representative,
 	})
@@ -45,6 +47,7 @@ def representativeModel(request, idaux):
 def playersList(request):
 	players = Player.objects.all()
 	variables = Context({
+		'title': 'List of Players',
 		'titlehead': 'List of Players',
 		'items': players,	
 		'route': '/playersList/',
@@ -56,6 +59,7 @@ def playerModel(request, idaux):
 	player = Player.objects.get(id = idaux)
 	template = get_template('modelPages/player.html')
 	variables = Context({
+		'title': 'Information of Player',
 		'titlehead': 'Information of Player',
 		'player': player,
 	})
@@ -65,6 +69,7 @@ def playerModel(request, idaux):
 def stadiumsList(request):
 	stadiums = Stadium.objects.all()
 	variables = Context({
+		'title': 'List of Stadiums',
 		'titlehead': 'List of Stadiums',
 		'items': stadiums,	
 		'route': '/stadiumsList/',
@@ -76,6 +81,7 @@ def stadiumModel(request, idaux):
 	stadium = Stadium.objects.get(id = idaux)
 	template = get_template('modelPages/stadium.html')
 	variables = Context({
+		'title': 'Information of Stadium',
 		'titlehead': 'Information of Stadium',
 		'stadium': stadium,
 	})
@@ -85,6 +91,7 @@ def stadiumModel(request, idaux):
 def coachsList(request):
 	coachs = Coach.objects.all()
 	variables = Context({
+		'title': 'List of Coachs',
 		'titlehead': 'List of Coachs',
 		'items': coachs,	
 		'route': '/coachsList/',
@@ -96,6 +103,7 @@ def coachModel(request, idaux):
 	coach = Coach.objects.get(id = idaux)
 	template = get_template('modelPages/coach.html')
 	variables = Context({
+		'title': 'Information of Coach',
 		'titlehead': 'Information of Coach',
 		'coach': coach,
 	})
@@ -105,6 +113,7 @@ def coachModel(request, idaux):
 def teamsList(request):
 	teams = Team.objects.all()
 	variables = Context({
+		'title': 'List of Teams',
 		'titlehead': 'List of Teams',
 		'items': teams,	
 		'route': '/teamList/',
@@ -116,6 +125,7 @@ def teamModel(request, idaux):
 	team = Team.objects.get(id = idaux)
 	template = get_template('modelPages/team.html')
 	variables = Context({
+		'title': 'Information of Team',
 		'titlehead': 'Information of Team',
 		'team': team,
 	})
@@ -125,6 +135,7 @@ def teamModel(request, idaux):
 def leaguesList(request):
 	leagues = League.objects.all()
 	variables = Context({
+		'title': 'List of Leagues',
 		'titlehead': 'List of Leagues',
 		'items': leagues,	
 		'route': '/leaguesList/',
@@ -136,6 +147,7 @@ def leagueModel(request, idaux):
 	league = League.objects.get(id = idaux)
 	template = get_template('modelPages/league.html')
 	variables = Context({
+		'title': 'Information of League',
 		'titlehead': 'Information of League',
 		'league': league,
 	})
@@ -144,6 +156,7 @@ def leagueModel(request, idaux):
 def refereesList(request):
 	referees = Referee.objects.all()
 	variables = Context({
+		'title': 'List of Referees',
 		'titlehead': 'List of Referees',
 		'items': referees,	
 		'route': '/refereesList/',
@@ -155,6 +168,7 @@ def refereeModel(request, idaux):
 	referee = Referee.objects.get(id = idaux)
 	template = get_template('modelPages/referee.html')
 	variables = Context({
+		'title': 'Information of Referee',
 		'titlehead': 'Information of Referee',
 		'ref': referee,
 	})
@@ -165,6 +179,7 @@ def matchesList(request):
 	matches = Match.objects.all()
 	template = get_template('listPages/matcheslist.html')
 	variables = Context({
+		'title': 'List of Matches',
 		'titlehead': 'List of Matches',
 		'items': matches,
 	})
@@ -174,7 +189,8 @@ def matchesList(request):
 def matchModel(request, idaux):
 	match = Match.objects.get(id = idaux)
 	template = get_template('modelPages/match.html')
-	variables = Context({
+	variables = Context({	
+		'title': 'Information of Match: ',
 		'titlehead': 'Information of Match: ',
 		'match': match,
 	})
