@@ -1,22 +1,101 @@
+{% load staticfiles %}
+<!--
+	Design by Free CSS Templates
+	http://www.freecsstemplates.org
+	Released for free under a Creative Commons Attribution License
+	Name       : Eponymous
+	Version    : 1.0
+	Released   : 20130222
+-->
 <html>
-	<head>
-	<title>{{ titlehead}}</title>
-	</head>
-	<body>
-		<h1>{{ pagetitle }}</h1>
+    <head>
+	<link rel="stylesheet"  href=" {% static "style.css" %} " />
+    	<meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>{{ titlehead}}</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
 
-	{% if user.username %}
-	<p>Benvingut {{ user.username }}!
-	</p>
-	{% else %}
-	<p>Benvingut anonim!!
-	</p>
-	{% endif %}
-	
-	<h2>List of Leagues:<h2>
-		<ol> 
-			<li>league 1 </li>
-			<li>league 2 </li>
-		</ol>	
-	</body>
-	</html>
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a>Welcome to the Football League App</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul>
+							<li class="first active">
+								<a href="/">Home</a>
+							</li>
+						</ul>
+
+						<br class="clear" />
+
+					</div>
+				</div>
+				<div id="banner">
+					<img src=" {% static "futbol.jpg" %} " width="600" height="200" alt="" />
+				</div>
+
+				<div id="main">
+					<div id="sidebar">
+
+
+						{% if user.username %}
+						<h3>Actual user: {{ user.username }}</h3>
+						{% else %}
+						<h3>Welcome:
+						Enter with your acount please: <a href="/login/">sign in</a></h3>
+						{% endif %}
+
+						<ul class="linkedList">
+							<li class="first">
+								<a href="/leaguesList/">List of Leagues:</a>
+							</li>
+							<li>
+								<a href="/teamsList/">List of Teams:</a>
+							</li>
+							<li>
+								<a href="/playersList/">List of Players:</a>
+							</li>
+							<li>
+								<a href="/coachsList/">List of Coachs:</a>
+							</li>
+							<li>
+								<a href="/representativesList/">List of Representatives:</a>
+							</li>
+							<li>
+								<a href="/stadiumsList/">List of Stadiums:</a>
+							</li>
+							<li>
+								<a href="/refereesList/">List of Referees:</a>
+							</li>
+						<li class="last">
+								<a href="/matchesList/">List of Matches:</a>
+							</li>
+						</ul>
+					</div>
+					<div id="content">
+						<div id="box1">
+{% block content %}
+							<p>Managing non legal funding since 2013</p>
+{% endblock %}
+						</div>
+
+						<br class="clear" />
+					</div>
+					<br class="clear" />
+				</div>
+
+			</div>
+			<div id="copyright">
+				Football League App | Autors: Oriol Capell and Jordi Niubó</a>
+			</div>
+		</div>
+    </body>
+</html>
