@@ -8,15 +8,13 @@ def mainpage(request):
 	template = get_template('mainpage.html')
 	variables = Context({
 		'titlehead': 'Football League App',
-		'pagetitle': 'Welcome to the Football League App',
 		'contentbody': 'Managing non legal funding since 2013',
-		'user': request.user,
 		})
-	output = template.render(variables)
-	return HttpResponse(output)
+
+	return general(request, template, variables)
 
 def general(request, template, variables):
-	variables['pagetitle'] = 'Welcome to the Football League App'
+	variables['user'] = request.user
 	if template == 'list':
 		template = get_template('listPages/list.html')
 
