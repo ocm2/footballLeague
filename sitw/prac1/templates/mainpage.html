@@ -28,37 +28,26 @@
 						</h1>
 					</div>
 					<div id="nav">
-<!--						<ul>
+						<ul>
 							<li class="first active">
-								<a href="#">Home</a>
+								<a href="/">Home</a>
 							</li>
 							<li>
-								<a href="#">Services</a>
+								<a href="http://www.facebook.com">Facebook</a>
 							</li>
 							<li>
-								<a href="#">Blog</a>
-							</li>
-							<li>
-								<a href="#">Portfolio</a>
-							</li>
-							<li>
-								<a href="#">About</a>
-							</li>
-							<li class="last">
-								<a href="#">Contact</a>
+								<a href="https://twitter.com/twitter_es">Twitter</a>
 							</li>
 						</ul>
--->
+
 						<br class="clear" />
 
 					</div>
 				</div>
 				<div id="banner">
-					<img src="http://1.bp.blogspot.com/_EZ16vWYvHHg/TAE4ukavXeI/AAAAAAAANqw/fn4-a6R2U7s/s1600/www.ImagenesGigantes.com-Futbol-11.jpg" width="1120" height="200" alt="" />					
-
-<!--<img src="http://1.bp.blogspot.com/_EZ16vWYvHHg/TAE4ukavXeI/AAAAAAAANqw/fn4-a6R2U7s/s1600/www.ImagenesGigantes.com-Futbol-11.jpg" width="1120" height="200" alt="" />
--->
+					<img src=" {% static "futbol.jpg" %} " width="600" height="200" alt="" />
 				</div>
+
 				<div id="main">
 					<div id="sidebar">
 
@@ -72,32 +61,33 @@
 
 						<ul class="linkedList">
 							<li class="first">
-								List of Leagues:<input type="button" value="Leagues List" onClick= location.href="/leaguesList/" />
+								<a href="/leaguesList/">List of Leagues:</a>
 							</li>
 							<li>
-								List of Teams:<input type="button" value="Teams List" onClick= location.href="/teamsList/" />
+								<a href="/teamsList/">List of Teams:</a>
 							</li>
 							<li>
-								List of Coachs:	<input type="button" value="Coachs List" onClick= location.href="/coachsList/" />
+								<a href="/coachsList/">List of Coachs:</a>
 							</li>
 							<li>
-								List of Representatives:
-									<input type="button" value="Representatives List" onClick= location.href="/representativesList/" />
+								<a href="/representativesList/">List of Representatives:</a>
 							</li>
 							<li>
-								List of Stadiums:<input type="button" value="Stadiums List" onClick= location.href="/stadiumsList/" />
+								<a href="/stadiumsList/">List of Stadiums:</a>
 							</li>
 							<li>
-								List of Referees:<input type="button" value="Referees List" onClick= location.href="/refereesList/" />
+								<a href="/refereesList/">List of Referees:</a>
 							</li>
 						<li class="last">
-								List of Matches:<input type="button" value="Matches List" onClick= location.href="/matchesList/" />
+								<a href="/matchesList/">List of Matches:</a>
 							</li>
 						</ul>
 					</div>
 					<div id="content">
 						<div id="box1">
-							
+{% block content %}
+							swdfsdfsdfsdfsdfsdfsdfsd
+{% endblock %}
 						</div>
 
 						<br class="clear" />
